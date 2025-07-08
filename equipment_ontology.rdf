@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/mykyta/ontologies/2025/6/untitled-ontology-17/"
+     xml:base="http://www.semanticweb.org/mykyta/ontologies/2025/6/untitled-ontology-17/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.example.com/ontology/equipment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.com/ontology/equipment#hasSensorReading -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontology/equipment#hasSensorReading">
+        <owl:inverseOf rdf:resource="http://www.example.com/ontology/equipment#isReadingOf"/>
+        <rdfs:domain rdf:resource="http://www.example.com/ontology/equipment#Equipment"/>
+        <rdfs:range rdf:resource="http://www.example.com/ontology/equipment#SensorReading"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/ontology/equipment#isLocatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontology/equipment#isLocatedIn">
+        <rdfs:domain rdf:resource="http://www.example.com/ontology/equipment#Equipment"/>
+        <rdfs:range rdf:resource="http://www.example.com/ontology/equipment#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/ontology/equipment#isReadingOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontology/equipment#isReadingOf">
+        <rdfs:domain rdf:resource="http://www.example.com/ontology/equipment#SensorReading"/>
+        <rdfs:range rdf:resource="http://www.example.com/ontology/equipment#Equipment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.com/ontology/equipment#equipmentType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/ontology/equipment#equipmentType">
+        <rdfs:domain rdf:resource="http://www.example.com/ontology/equipment#Equipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/ontology/equipment#hasHumidity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/ontology/equipment#hasHumidity">
+        <rdfs:domain rdf:resource="http://www.example.com/ontology/equipment#SensorReading"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/ontology/equipment#hasPressure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/ontology/equipment#hasPressure">
+        <rdfs:domain rdf:resource="http://www.example.com/ontology/equipment#SensorReading"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/ontology/equipment#hasTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/ontology/equipment#hasTemperature">
+        <rdfs:domain rdf:resource="http://www.example.com/ontology/equipment#SensorReading"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/ontology/equipment#hasVibration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/ontology/equipment#hasVibration">
+        <rdfs:domain rdf:resource="http://www.example.com/ontology/equipment#SensorReading"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/ontology/equipment#locationName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/ontology/equipment#locationName">
+        <rdfs:domain rdf:resource="http://www.example.com/ontology/equipment#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.com/ontology/equipment#Anomaly -->
+
+    <owl:Class rdf:about="http://www.example.com/ontology/equipment#Anomaly">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontology/equipment#SensorReading"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontology/equipment#Equipment -->
+
+    <owl:Class rdf:about="http://www.example.com/ontology/equipment#Equipment"/>
+    
+
+
+    <!-- http://www.example.com/ontology/equipment#Location -->
+
+    <owl:Class rdf:about="http://www.example.com/ontology/equipment#Location"/>
+    
+
+
+    <!-- http://www.example.com/ontology/equipment#SensorReading -->
+
+    <owl:Class rdf:about="http://www.example.com/ontology/equipment#SensorReading"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
