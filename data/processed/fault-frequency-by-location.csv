@@ -1,0 +1,16 @@
+locationName,equipmentType,faultyCount
+Atlanta,Pump,69
+Chicago,Pump,69
+Houston,Pump,69
+New York,Pump,69
+San Francisco,Pump,69
+Atlanta,Turbine,63
+Chicago,Turbine,63
+Houston,Turbine,63
+New York,Turbine,63
+San Francisco,Turbine,63
+Atlanta,Compressor,54
+Chicago,Compressor,54
+Houston,Compressor,54
+New York,Compressor,54
+San Francisco,Compressor,54

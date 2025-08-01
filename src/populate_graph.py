@@ -25,7 +25,7 @@ except FileNotFoundError:
 # --- 2. Data Loading: Read the CSV File ---
 
 try:
-    df = pd.read_csv("equipment_anomaly_data.csv")
+    df = pd.read_csv("../data/raw/equipment_anomaly_data.csv")
     print(f"Successfully loaded {len(df)} rows from CSV.")
 except FileNotFoundError:
     print("Error: 'equipment_anomaly_data.csv' not found.")
@@ -67,7 +67,7 @@ for index, row in df.iterrows():
 
 # --- 4. Serialization: Save the Populated Graph ---
 
-output_file = "populated_knowledge_graph.ttl"
+output_file = "../data/processed/populated_knowledge_graph.ttl"
 g.serialize(destination=output_file, format="turtle")
 
 print(f"\n✅ Knowledge graph population complete!")
