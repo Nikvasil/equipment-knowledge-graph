@@ -1,7 +1,5 @@
 @prefix data: <http://www.example.com/data/equipment/> .
 @prefix ont: <http://www.example.com/ontology/equipment#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 data:reading-0 a ont:SensorReading ;
@@ -14190,45 +14188,6 @@ data:reading-999 a ont:SensorReading ;
     ont:hasVibration "1.83327126599132"^^xsd:float ;
     ont:isReadingOf data:equipment-Pump .
 
-<http://www.example.com/ontology/equipment> a owl:Ontology .
-
-ont:equipmentType a owl:DatatypeProperty ;
-    rdfs:domain ont:Equipment ;
-    rdfs:range xsd:string .
-
-ont:hasHumidity a owl:DatatypeProperty ;
-    rdfs:domain ont:SensorReading ;
-    rdfs:range xsd:float .
-
-ont:hasPressure a owl:DatatypeProperty ;
-    rdfs:domain ont:SensorReading ;
-    rdfs:range xsd:float .
-
-ont:hasSensorReading a owl:ObjectProperty ;
-    rdfs:domain ont:Equipment ;
-    rdfs:range ont:SensorReading ;
-    owl:inverseOf ont:isReadingOf .
-
-ont:hasTemperature a owl:DatatypeProperty ;
-    rdfs:domain ont:SensorReading ;
-    rdfs:range xsd:float .
-
-ont:hasVibration a owl:DatatypeProperty ;
-    rdfs:domain ont:SensorReading ;
-    rdfs:range xsd:float .
-
-ont:isLocatedIn a owl:ObjectProperty ;
-    rdfs:domain ont:Equipment ;
-    rdfs:range ont:Location .
-
-ont:locationName a owl:DatatypeProperty ;
-    rdfs:domain ont:Location ;
-    rdfs:range xsd:string .
-
-ont:isReadingOf a owl:ObjectProperty ;
-    rdfs:domain ont:SensorReading ;
-    rdfs:range ont:Equipment .
-
 data:location-Atlanta a ont:Location ;
     ont:locationName "Atlanta" .
 
@@ -14243,13 +14202,6 @@ data:location-New_York a ont:Location ;
 
 data:location-San_Francisco a ont:Location ;
     ont:locationName "San Francisco" .
-
-ont:Equipment a owl:Class .
-
-ont:Location a owl:Class .
-
-ont:Anomaly a owl:Class ;
-    rdfs:subClassOf ont:SensorReading .
 
 data:equipment-Compressor a ont:Equipment ;
     ont:equipmentType "Compressor" ;
@@ -14274,6 +14226,4 @@ data:equipment-Turbine a ont:Equipment ;
         data:location-Houston,
         data:location-New_York,
         data:location-San_Francisco .
-
-ont:SensorReading a owl:Class .
 
