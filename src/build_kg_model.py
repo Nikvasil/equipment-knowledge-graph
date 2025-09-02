@@ -116,3 +116,19 @@ plt.savefig(importance_path_plot)
 plt.close()
 print(f"Feature importance plot saved to {importance_path_plot}")
 print("\nAll reports for the KG-Aware Model have been saved.")
+
+# --- 6. Save Model Assets for Production Use ---
+# (Add this section to the end of build_kg_model.py)
+from joblib import dump
+
+assets_dir = '../models'
+os.makedirs(assets_dir, exist_ok=True)
+
+# Save the trained model
+dump(model, os.path.join(assets_dir, 'kg_model.joblib'))
+# Save the scaler
+dump(scaler, os.path.join(assets_dir, 'kg_scaler.joblib'))
+# Save the list of feature names (columns) after one-hot encoding
+dump(X.columns.tolist(), os.path.join(assets_dir, 'training_columns.joblib'))
+
+print(f"\nModel, scaler, and column names saved to the '{assets_dir}' directory.")
