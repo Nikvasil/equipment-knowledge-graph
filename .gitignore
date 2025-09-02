@@ -39,6 +39,7 @@ MANIFEST
 # -------------------------
 /data/processed/
 /reports
+/models
 
 # Ignore OS-specific files
 .DS_Store
